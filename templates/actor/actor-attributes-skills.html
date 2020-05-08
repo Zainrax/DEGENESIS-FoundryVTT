@@ -3,13 +3,13 @@
    <div class="attribute-skill-group">
       <div class="attribute"> 
          <h3>{{attributeKey}}</h3>
-         <input type="text" name="{{attributeKey}}" value="{{attribute.value}}" data-dtype="Number" />
+         <input type="text" name="data.attributes.{{attributeKey}}.value" value="{{attribute.value}}" data-dtype="Number" />
       </div>
       <div class = "skill-list">
          {{#each attribute.skills as |skill skillKey|}}
          <div class = "skill">
             <a>{{skillKey}}</a>
-            <input type="text" name="{{skillKey}}" value="{{skill.value}}" data-dtype="Number"/>      
+            <input type="text" name="data.attributes.{{attributeKey}}.skills.{{skillKey}}.value" value="{{skill.value}}" data-dtype="Number"/>      
          </div>
          {{/each}}
       </div>
