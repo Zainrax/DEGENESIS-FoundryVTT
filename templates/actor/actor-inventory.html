@@ -20,7 +20,7 @@
       </div>
       <ul class="inventory items-list">
          {{#each section.items as |item i|}}
-         <li class = "item flexrow">
+         <li class = "item flexrow" data-item-id={{item._id}}>
             <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
             <span class="item-name">{{item.name}}</span>
             <span class="item-equipped"><a><i class="far fa-circle"></i></a></span>

@@ -64,16 +64,16 @@ export class DegenesisActorSheet extends ActorSheet {
 		});
 
 		html.find('.item-equipped').click((ev) => {
-			const li = $(ev.currentTarget).parents('.item');
+			const li = $(ev.currentTarget).parents('.item').attr('data-item-id');
 			const item = this.actor.getOwnedItem(li.data('itemId'));
-			console.log(item);
+			item.sheet.render(true);
 		});
 
 		// Update Inventory Item
 		html.find('.item-edit').click((ev) => {
-			const li = $(ev.currentTarget).parents('.item');
-			const item = this.actor.getOwnedItem(li.data('itemId'));
-			item.update();
+			const li = $(ev.currentTarget).parents('.item').attr('data-item-id');
+			const item = this.actor.getOwnedItem(li);
+			item.sheet.render(true);
 		});
 
 		// Delete Inventory Item
