@@ -1,15 +1,15 @@
 <div class="attribute-tab">
-   {{#each attributeSkillGroups as |group g|}}
+   {{#each actor.data.attributes as |attribute attributeKey|}}
    <div class="attribute-skill-group">
       <div class="attribute"> 
-         <h3>{{group.label}}</h3>
-         <input type="text" name="data.attributes.{{g}}.value" value="{{group.value}}" data-dtype="Number" />
+         <h3>{{attributeKey}}</h3>
+         <input type="text" name="{{attributeKey}}" value="{{attribute.value}}" data-dtype="Number" />
       </div>
       <div class = "skill-list">
-         {{#each group.skills as |skill sk|}}
+         {{#each attribute.skills as |skill skillKey|}}
          <div class = "skill">
-            <a>{{skill.label}}</a>
-            <input type="text" name="data.skills.{{sk}}.value" value="{{skill.value}}" data-dtype="Number"/>      
+            <a>{{skillKey}}</a>
+            <input type="text" name="{{skillKey}}" value="{{skill.value}}" data-dtype="Number"/>      
          </div>
          {{/each}}
       </div>

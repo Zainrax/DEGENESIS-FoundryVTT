@@ -1,444 +1,433 @@
 :root {
-    --degenesis-red: #ed1d27;
+	--degenesis-red: #ed1d27;
 }
 
 ::-webkit-scrollbar-thumb {
-    outline: none;
-    border-radius: 3px;
-    background: #782e22;
-    border: 1px solid var(--degenesis-red);
-  }
+	outline: none;
+	border-radius: 3px;
+	background: #782e22;
+	border: 1px solid var(--degenesis-red);
+}
 
-  @font-face {
-    font-family: "Avenir";
-    src: url('../fonts/AvenirLTStd-Roman.otf');
-  }
-  @font-face {
-    font-family: "Avenir";
-    src: url('../fonts/AvenirLTStd-Black.otf');
-    font-weight: bold;
-  }
+@font-face {
+	font-family: "Avenir";
+	src: url('../fonts/AvenirLTStd-Roman.otf');
+}
+@font-face {
+	font-family: "Avenir";
+	src: url('../fonts/AvenirLTStd-Black.otf');
+	font-weight: bold;
+}
 
-  @font-face {
-    font-family: "Calluna";
-    src: url('../fonts/Calluna-Regular.otf');
-  }
+@font-face {
+	font-family: "Calluna";
+	src: url('../fonts/Calluna-Regular.otf');
+}
 
 .degenesis.sheet .window-content {
-    padding: 5px;
-    overflow-y: hidden;
-    background: white;
-    font-family: "Avenir"
+	padding: 5px;
+	overflow-y: hidden;
+	background: white;
+	font-family: "Avenir";
 }
 
 .degenesis.sheet .editable {
-    height: 100%
+	height: 100%;
 }
 
-
 .degenesis.sheet a:hover {
-    text-shadow: none
+	text-shadow: none;
 }
 
 .degenesis.sheet .item-controls a:hover {
-    color: var(--degenesis-red)
+	color: var(--degenesis-red);
 }
 
 .degenesis.sheet h2 {
-    border: none    
+	border: none;
 }
 
-
 .degenesis.sheet .progress-bar {
-    background-color: var(--degenesis-red);
-    height: 2px;
+	background-color: var(--degenesis-red);
+	height: 2px;
 }
 
 .degenesis.sheet input[type="text"] {
-    background: none;
-    border: none;
-    padding-top: 5px;
+	background: none;
+	border: none;
+	padding-top: 5px;
 }
 
 .degenesis.sheet input[type="text"]:focus {
-    box-shadow: none;
+	box-shadow: none;
 }
 
 .degenesis.sheet input[type="text"]:hover {
-    color: var(--degenesis-red);
-    -webkit-transition: color 100ms linear;
-    -ms-transition: color 100ms linear;
-    transition: color 100ms linear;
+	color: var(--degenesis-red);
+	-webkit-transition: color 100ms linear;
+	-ms-transition: color 100ms linear;
+	transition: color 100ms linear;
 }
 
 .degenesis.sheet .inline-input {
-    display:flex;
-    align-items: center
+	display: flex;
+	align-items: center;
 }
 .degenesis.sheet .inline-input > input[type="text"] {
-    width:30px;
+	width: 30px;
 }
 
 .degenesis.sheet .inline-input input[type="text"]:first-of-type {
-    border-right: 1px solid black;
-    border-radius: 0px;
+	border-right: 1px solid black;
+	border-radius: 0px;
 }
 .degenesis.sheet .inline-input input[type="text"]:last-of-type {
-    border-left: 1px solid black;
-    border-radius: 0px;
-
+	border-left: 1px solid black;
+	border-radius: 0px;
 }
 
-
-
-
 .degenesis.sheet textarea {
-    outline: var(--degenesis-red);
-    box-shadow: none;
-    font-family: "Calluna"
+	outline: var(--degenesis-red);
+	box-shadow: none;
+	font-family: "Calluna";
 }
 
 .degenesis.sheet textarea:focus {
-    outline: var(--degenesis-red);
-    box-shadow: none
+	outline: var(--degenesis-red);
+	box-shadow: none;
 }
 
 .degenesis.sheet select {
-    background: none;
-    border: none;
-    border-bottom: 1px solid black;
-    border-radius: 0px;
-    padding: 0px;
-    text-align-last:center
+	background: none;
+	border: none;
+	border-bottom: 1px solid black;
+	border-radius: 0px;
+	padding: 0px;
+	text-align-last: center;
 }
 
-.degenesis.sheet select:focus{
-    border-bottom: 1px solid var(--degenesis-red);
-    box-shadow: none;
+.degenesis.sheet select:focus {
+	border-bottom: 1px solid var(--degenesis-red);
+	box-shadow: none;
 }
 
-.degenesis.sheet select > *{
-    color: white;
-    background-color: black
+.degenesis.sheet select > * {
+	color: white;
+	background-color: black;
 }
-
 
 .degenesis.sheet .sheet-field {
-    display: flex;
-    border-bottom: 1px solid black
+	display: flex;
+	border-bottom: 1px solid black;
 }
 
 .degenesis.sheet .condition .condition-item:hover,
-    .degenesis.sheet .condition .condition-section:hover 
-.degenesis.sheet .sheet-field-stack:hover,
+.degenesis.sheet .condition .condition-section:hover .degenesis.sheet .sheet-field-stack:hover,
 .degenesis.sheet .sheet-field:hover {
-    color: var(--degenesis-red);
-    -webkit-transition: color 100ms linear;
-    -ms-transition: color 100ms linear;
-    transition: color 100ms linear;
+	color: var(--degenesis-red);
+	-webkit-transition: color 100ms linear;
+	-ms-transition: color 100ms linear;
+	transition: color 100ms linear;
 }
 
 .degenesis.sheet .sheet-field-stack .field-input-stacked:hover,
 .degenesis.sheet .sheet-field:hover {
-   border-bottom: 1px solid var(--degenesis-red);   
-   -webkit-transition: border-bottom 100ms linear;
-   -ms-transition: border-bottom 100ms linear;
-   transition: border-bottom 100ms linear;
+	border-bottom: 1px solid var(--degenesis-red);
+	-webkit-transition: border-bottom 100ms linear;
+	-ms-transition: border-bottom 100ms linear;
+	transition: border-bottom 100ms linear;
 }
 
 .degenesis.sheet .sheet-field-stack .field-input-stacked {
-    border-bottom: 1px solid black;
-    text-align: center;
+	border-bottom: 1px solid black;
+	text-align: center;
 }
 
-
 .degenesis.sheet .sheet-field .field-name {
-    margin-top: 5px;
+	margin-top: 5px;
 }
 
 /* Sheet Header */
 .degenesis.sheet .sheet-header {
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    flex: 0 0 100px;
-    margin-bottom: 10px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	flex: 0 0 100px;
+	margin-bottom: 10px;
 }
 
 .degenesis.sheet .profile-img {
-    flex: 0 0 100px;
-    height: 100px;
-    margin: 10px;
-    border: none
+	flex: 0 0 100px;
+	height: 100px;
+	margin: 10px;
+	border: none;
 }
-
 
 /* Navigation Tabs */
 .degenesis.sheet .tabs {
-    flex: 0 0 40px;
-    height: 20px;
+	flex: 0 0 40px;
+	height: 20px;
 }
 
 .degenesis.sheet .tabs .item {
-    color: white;
-    background-color: black;
-    margin: 0px 10px 0px 10px;
-    line-height: 20px
+	color: white;
+	background-color: black;
+	margin: 0px 10px 0px 10px;
+	line-height: 20px;
 }
 
 .degenesis.sheet .tabs .item.active {
-    background-color: var(--degenesis-red);
-    text-shadow: none
+	background-color: var(--degenesis-red);
+	text-shadow: none;
 }
 
 .degenesis.sheet .tab {
-    height: 100%
+	height: 100%;
 }
 
 .degenesis.sheet .tab-content {
-    width: 100%;
-    height: calc(100% - 150px);
-    overflow: auto
+	width: 100%;
+	height: calc(100% - 150px);
+	overflow: auto;
 }
 
 .degenesis.sheet .row {
-    display: flex;
+	display: flex;
 }
 
 .degenesis.sheet .three-Cs {
-    height: 35%;
-    min-height: 130px;
+	height: 35%;
+	min-height: 130px;
 }
 
-.degenesis.sheet .three-Cs .sheet-field-stack{
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+.degenesis.sheet .three-Cs .sheet-field-stack {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
 }
 
-.degenesis.sheet .three-Cs > *{
-    width: 33%;
-    margin: 15px
+.degenesis.sheet .three-Cs > * {
+	width: 33%;
+	margin: 15px;
 }
 
-.degenesis.sheet .three-Cs > input{
-    width: 33%;
-    margin: 15px
+.degenesis.sheet .three-Cs > input {
+	width: 33%;
+	margin: 15px;
 }
 
-
-.degenesis.sheet .three-Cs img{
-    border: none;
-    margin: 5px;
+.degenesis.sheet .three-Cs img {
+	border: none;
+	margin: 5px;
 }
 
-.degenesis.sheet .section-header.row .row-divide{
-    width:40%;
-    border-bottom: 1px solid black;
-    margin: 20px
+.degenesis.sheet .section-header.row .row-divide {
+	width: 40%;
+	border-bottom: 1px solid black;
+	margin: 20px;
 }
 
-.degenesis.sheet .section-header.row h3{
-    padding-top:10px
+.degenesis.sheet .section-header.row h3 {
+	padding-top: 10px;
 }
 
 .degenesis.sheet .condition {
-    height: 50%
+	height: 50%;
 }
 
 .degenesis.sheet .skill:hover,
 .degenesis.sheet .condition .condition-item:hover,
-    .degenesis.sheet .condition .condition-section:hover {
-        color: var(--degenesis-red);
-    -webkit-transition: color 100ms linear;
-    -ms-transition: color 100ms linear;
-    transition: color 100ms linear;
+.degenesis.sheet .condition .condition-section:hover {
+	color: var(--degenesis-red);
+	-webkit-transition: color 100ms linear;
+	-ms-transition: color 100ms linear;
+	transition: color 100ms linear;
 }
 
 .degenesis.sheet .condition > * {
-    width: 33%;
-    text-align: center;
+	width: 33%;
+	text-align: center;
 }
 
 .degenesis.sheet .condition .inline-input {
-    border-bottom: 2px solid black;
-    margin-bottom: 3px
+	border-bottom: 2px solid black;
+	margin-bottom: 3px;
 }
 .degenesis.sheet .condition .divider {
-    font-size: 20px
+	font-size: 20px;
 }
 .degenesis.sheet .condition-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-items: center;
-    margin-top: 5px
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-items: center;
+	margin-top: 5px;
 }
 
 .degenesis.sheet .condition textarea {
-    height: 100%;
-    overflow-x: hidden;
-    background: none;
-    border-radius: 0px;
-    background-attachment: local;
-    background-image: linear-gradient(to right, white 10px, transparent 10px), linear-gradient(to left, white 10px, transparent 10px), repeating-linear-gradient(white, white 20px, #ccc 20px, #ccc 20px, white 21px);
-    line-height: 21px;
-    padding: 1px 8px;
-    resize: none;
- }
+	height: 100%;
+	overflow-x: hidden;
+	background: none;
+	border-radius: 0px;
+	background-attachment: local;
+	background-image: linear-gradient(to right, white 10px, transparent 10px),
+		linear-gradient(to left, white 10px, transparent 10px),
+		repeating-linear-gradient(white, white 20px, #ccc 20px, #ccc 20px, white 21px);
+	line-height: 21px;
+	padding: 1px 8px;
+	resize: none;
+}
 
- .degenesis.sheet .attribute-tab .attribute-skill-group {
-    margin: 20px;
-    width: 25%;
+.degenesis.sheet .attribute-tab .attribute-skill-group {
+	margin: 20px;
+	width: 25%;
 }
 .degenesis.sheet .attribute-tab {
-    display: flex;
-    flex-wrap: wrap;
- }
+	text-transform: uppercase;
+	display: flex;
+	flex-wrap: wrap;
+}
 
- .degenesis.sheet .attribute {
-     border-bottom: 1px solid black
- }
+.degenesis.sheet .attribute {
+	border-bottom: 1px solid black;
+}
 
- .degenesis.sheet .skill,
- .degenesis.sheet .attribute {
-     display: flex;
-     justify-content: space-between;
- }
- .degenesis.sheet .skill >*,
- .degenesis.sheet .attribute > *{
-    display: flex;
+.degenesis.sheet .skill,
+.degenesis.sheet .attribute {
+	display: flex;
+	justify-content: space-between;
+}
+.degenesis.sheet .skill > *,
+.degenesis.sheet .attribute > * {
+	display: flex;
 }
 .degenesis.sheet .skill a {
-    margin-top: 5px;
+	margin-top: 5px;
 }
 
 .degenesis.sheet .skill-list {
-    margin-top:10px;
+	margin-top: 10px;
 }
 
- .degenesis.sheet .skill input[type="text"] ,
-    .degenesis.sheet .attribute input[type="text"] {
-     border: 1px solid black;
-     border-radius: 0px;
-     width:20px;
-     height:20px;
-     text-align: center;
- }
+.degenesis.sheet .skill input[type="text"],
+.degenesis.sheet .attribute input[type="text"] {
+	border: 1px solid black;
+	border-radius: 0px;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+}
 
- .degenesis.sheet .skill input[type="text"]{
-     border-top: 0px;
-     border-left: 0px;
-     border-right: 0px;
-    }
+.degenesis.sheet .skill input[type="text"] {
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+}
 
-
- .degenesis.sheet .attribute h3{
-     margin-bottom: 0px;
- }
-
-
+.degenesis.sheet .attribute h3 {
+	margin-bottom: 0px;
+}
 
 /* Items */
 .degenesis.sheet .items-list {
-    list-style: none;
-    padding: 0;
+	list-style: none;
+	padding: 0;
 }
 .degenesis.sheet .inventory-tab {
-    margin-top: 20px   
+	margin-top: 20px;
 }
 
 .degenesis.sheet .items-list .item {
-    height: 30px;
-    line-height: 24px;
+	height: 30px;
+	line-height: 24px;
 }
 .degenesis.sheet .items-list .item img {
-    flex: 0 0 24px;
-    margin-right: 5px;
+	flex: 0 0 24px;
+	margin-right: 5px;
 }
 .degenesis.sheet .items-list .item-controls {
-    flex: 0 0 36px;
+	flex: 0 0 36px;
 }
 .degenesis.sheet .item-header .item-controls {
-    flex: 0 0 50px;
+	flex: 0 0 50px;
 }
 
 .degenesis.sheet .item-section {
-    border: 1px solid black;
+	border: 1px solid black;
 }
 
 .degenesis.sheet .item-header .item-equipped,
 .degenesis.sheet .item-header .item-tech,
-    .degenesis.sheet .item-header .item-encumbrance {
-    flex: 0 0 40px;
+.degenesis.sheet .item-header .item-encumbrance {
+	flex: 0 0 40px;
 }
 
 .degenesis.sheet .items-list .item-equipped,
 .degenesis.sheet .items-list .item-tech,
-    .degenesis.sheet .items-list .item-encumbrance {
-    flex: 0 0 40px;
+.degenesis.sheet .items-list .item-encumbrance {
+	flex: 0 0 40px;
 }
 .degenesis.sheet .item-equipped,
 .degenesis.sheet .item-tech,
-    .degenesis.sheet .item-encumbrance {
-    text-align: center
+.degenesis.sheet .item-encumbrance {
+	text-align: center;
 }
 
-.degenesis.sheet .header-details{
-    border-bottom: 1px solid black
+.degenesis.sheet .header-details {
+	border-bottom: 1px solid black;
 }
 .degenesis.sheet .header-details > *,
-.degenesis.sheet .item > *{
-    margin: 0px 5px 0px 5px
+.degenesis.sheet .item > * {
+	margin: 0px 5px 0px 5px;
 }
 
 .degenesis.sheet .item-header .header-type {
-    background-color: black;
-    color: white;
-    text-align: center;
-    height: 24px;
-    line-height: 24px
+	background-color: black;
+	color: white;
+	text-align: center;
+	height: 24px;
+	line-height: 24px;
 }
 
 /* Attributes */
-.degenesis.sheet .attributes-header { 
-    padding: 5px;
-    margin: 5px 0;
-    background: rgba(0, 0, 0, 0.05);
-    border: 1px solid #AAA;
-    border-radius: 2px;
-    text-align: center;
-    font-weight: bold;
+.degenesis.sheet .attributes-header {
+	padding: 5px;
+	margin: 5px 0;
+	background: rgba(0, 0, 0, 0.05);
+	border: 1px solid #aaa;
+	border-radius: 2px;
+	text-align: center;
+	font-weight: bold;
 }
-.degenesis.sheet .attribute-label { 
-    flex: 1.5;
+.degenesis.sheet .attribute-label {
+	flex: 1.5;
 }
-.degenesis.sheet .attribute-control { 
-    flex: 0 0 20px;
+.degenesis.sheet .attribute-control {
+	flex: 0 0 20px;
 }
 
 .degenesis.sheet .attributes-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .degenesis.sheet .attributes-list li > * {
-    margin: 0 3px;
-    height: 28px;
-    line-height: 24px;
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    border-bottom: 1px solid #AAA;
+	margin: 0 3px;
+	height: 28px;
+	line-height: 24px;
+	background: transparent;
+	border: none;
+	border-radius: 0;
+	border-bottom: 1px solid #aaa;
 }
 
 .degenesis.sheet .attribute-value.checkbox {
-    text-align: center;
+	text-align: center;
 }
 
 .degenesis.sheet .attributes-list li a.attribute-control {
-    border: none;
+	border: none;
 }
