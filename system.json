@@ -22,8 +22,8 @@
   "gridUnits": "ft",
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": "power",
-  "url": "",
-  "manifest": "",
-  "download": "",
+  "url": "https://github.com/Zainrax/DEGENESIS-FoundryVTT",
+  "manifest": "https://raw.githubusercontent.com/Zainrax/DEGENESIS-FoundryVTT/master/system.json",
+  "download": "https://github.com/Zainrax/DEGENESIS-FoundryVTT/archive/master.zip",
   "license": "LICENSE.txt"
 }
