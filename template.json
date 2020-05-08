@@ -1,385 +1,331 @@
 {
-"Actor": {
-  "types": ["character", "npc"],
-  "templates" : {
-    "details" : {
-      "details" : {
-        "age" : {
-          "type" : "Number",
-          "value" : null
-        },
-        "rank" : {
-          "type" : "String",
-          "value" : ""
-        },
-        "experience" : {
-          "type" : "Number",
-          "value" : 0
-        },
-        "sex" : {
-          "type" : "String",
-          "value" : ""
-        },
-        "height" : {
-          "type" : "String",
-          "value" : ""
-        },
-        "weight" : {
-          "type" : "String",
-          "value" : ""
-        },
-        "dinars" : {
-          "type" : "Number",
-          "value" : 0
-        },
-        "concept" : {
-          "type" : "String",
-          "value" : ""
-        },
-        "cult" : {
-          "type" : "String",
-          "value" : ""
-        },
-        "culture" : {
-          "type" : "String",
-          "value" : ""
-        }
-      }
-    },
-    "attributes" : {
-      "attributes" : {
-        "body" : {
-          "type" : "Number",
-          "value" : 1
-        },
-        "agility" : {
-          "type" : "Number",
-          "value" : 1
-        },
-        "charisma" : {
-          "type" : "Number",
-          "value" : 1
-        },
-        "intellect" : {
-          "type" : "Number",
-          "value" : 1
-        },
-        "psyche" : {
-          "type" : "Number",
-          "value" : 1
-        },
-        "instinct" : {
-          "type" : "Number",
-          "value" : 1
-        }
-      }
-    },
-    "skills" : {
-      "skills" : {
-        "athletics" : {
-          "attribute": "body",
-          "type" : "Number",
-          "value" : 0
-        },
-        "brawl" : {
-          "attribute": "body",
-          "type" : "Number",
-          "value" : 0
-        },
-        "force" : {
-          "attribute": "body",
-          "type" : "Number",
-          "value" : 0
-        },
-        "melee" : {
-          "attribute": "body",
-          "type" : "Number",
-          "value" : 0
-        },
-        "stamina" : {
-          "attribute": "body",
-          "type" : "Number",
-          "value" : 0
-        },
-        "toughness" : {
-          "attribute": "body",
-          "type" : "Number",
-          "value" : 0
-        },
+	"Actor": {
+		"types": [ "character", "npc" ],
+		"templates": {
+			"details": {
+				"details": {
+					"age": {
+						"type": "Number",
+						"value": null
+					},
+					"rank": {
+						"type": "String",
+						"value": ""
+					},
+					"experience": {
+						"type": "Number",
+						"value": 0
+					},
+					"sex": {
+						"type": "String",
+						"value": ""
+					},
+					"height": {
+						"type": "String",
+						"value": ""
+					},
+					"weight": {
+						"type": "String",
+						"value": ""
+					},
+					"dinars": {
+						"type": "Number",
+						"value": 0
+					},
+					"concept": {
+						"type": "String",
+						"value": ""
+					},
+					"cult": {
+						"type": "String",
+						"value": ""
+					},
+					"culture": {
+						"type": "String",
+						"value": ""
+					}
+				}
+			},
+			"attributes": {
+				"attributes": {
+					"body": {
+						"value": 1,
+						"skills": {
+							"athletics": {
+								"value": 0
+							},
+							"brawl": {
+								"value": 0
+							},
+							"force": {
+								"value": 0
+							},
+							"melee": {
+								"value": 0
+							},
+							"stamina": {
+								"value": 0
+							},
+							"toughness": {
+								"value": 0
+							}
+						}
+					},
+					"agility": {
+						"value": 1,
 
+						"skills": {
+							"crafting": {
+								"value": 0
+							},
+							"dexterity": {
+								"value": 0
+							},
+							"navigation": {
+								"value": 0
+							},
+							"mobility": {
+								"value": 0
+							},
+							"projectiles": {
+								"value": 0
+							},
+							"stealth": {
+								"value": 0
+							}
+						}
+					},
+					"charisma": {
+						"value": 1,
+						"skills": {
+							"arts": {
+								"value": 0
+							},
+							"conduct": {
+								"value": 0
+							},
+							"expression": {
+								"value": 0
+							},
+							"leadership": {
+								"value": 0
+							},
+							"negotiation": {
+								"value": 0
+							},
+							"seduction": {
+								"value": 0
+							}
+						}
+					},
+					"intellect": {
+						"value": 1,
 
-        "crafting" : {
-          "attribute": "agility",
-          "type" : "Number",
-          "value" : 0
-        },
-        "dexterity" : {
-          "attribute": "agility",
-          "type" : "Number",
-          "value" : 0
-        },
-        "navigation" : {
-          "attribute": "agility",
-          "type" : "Number",
-          "value" : 0
-        },
-        "mobility" : {
-          "attribute": "agility",
-          "type" : "Number",
-          "value" : 0
-        },
-        "projectiles" : {
-          "attribute": "agility",
-          "type" : "Number",
-          "value" : 0
-        },
-        "stealth" : {
-          "attribute": "agility",
-          "type" : "Number",
-          "value" : 0
-        },
-
-
-        "arts" : {
-          "attribute": "charisma",
-          "type" : "Number",
-          "value" : 0
-        },
-        "conduct" : {
-          "attribute": "charisma",
-          "type" : "Number",
-          "value" : 0
-        },
-        "expression" : {
-          "attribute": "charisma",
-          "type" : "Number",
-          "value" : 0
-        },
-        "leadership" : {
-          "attribute": "charisma",
-          "type" : "Number",
-          "value" : 0
-        },
-        "negotiation" : {
-          "attribute": "charisma",
-          "type" : "Number",
-          "value" : 0
-        },
-        "seduction" : {
-          "attribute": "charisma",
-          "type" : "Number",
-          "value" : 0
-        },
-
-
-        "artifact" : {
-          "attribute": "intellect",
-          "type" : "Number",
-          "value" : 0
-        },
-        "engineering" : {
-          "attribute": "intellect",
-          "type" : "Number",
-          "value" : 0
-        },
-        "focus" : {
-          "attribute": "intellect",
-          "type" : "Number",
-          "value" : 0
-        },
-        "legends" : {
-          "attribute": "intellect",
-          "type" : "Number",
-          "value" : 0
-        },
-        "medicine" : {
-          "attribute": "intellect",
-          "type" : "Number",
-          "value" : 0
-        },
-        "science" : {
-          "attribute": "intellect",
-          "type" : "Number",
-          "value" : 0
-        },
-
-
-        "cunning" : {
-          "attribute": "psyche",
-          "type" : "Number",
-          "value" : 0
-        },
-        "deception" : {
-          "attribute": "psyche",
-          "type" : "Number",
-          "value" : 0
-        },
-        "domination" : {
-          "attribute": "psyche",
-          "type" : "Number",
-          "value" : 0
-        },
-        "faith" : {
-          "attribute": "psyche",
-          "type" : "Number",
-          "value" : 0
-        },
-        "reaction" : {
-          "attribute": "psyche",
-          "type" : "Number",
-          "value" : 0
-        },
-        "willpower" : {
-          "attribute": "psyche",
-          "type" : "Number",
-          "value" : 0
-        },
-
-
-        "empathy" : {
-          "attribute": "instinct",
-          "type" : "Number",
-          "value" : 0
-        },
-        "orienteering" : {
-          "attribute": "instinct",
-          "type" : "Number",
-          "value" : 0
-        },
-        "perception" : {
-          "attribute": "instinct",
-          "type" : "Number",
-          "value" : 0
-        },
-        "primal" : {
-          "attribute": "instinct",
-          "type" : "Number",
-          "value" : 0
-        },
-        "survival" : {
-          "attribute": "instinct",
-          "type" : "Number",
-          "value" : 0
-        },
-        "taming" : {
-          "attribute": "instinct",
-          "type" : "Number",
-          "value" : 0
-        }
-      }
-    },
-    "status": {
-      "status" : {
-        "ego": {
-          "max": 0,
-          "value": 0
-        },
-        "spore": {
-          "max": 0,
-          "value": 0
-        },
-        "fleshwounds": {
-          "max": 0,
-          "value": 0
-        },
-        "trauma": {
-          "max": 0,
-          "value": 0
-        }
-      }
-    },
-    "backgrounds": {
-      "backgrounds" : {
-        "allies" : {
-          "label" : "Allies",
-          "value" : 0
-        },
-        "authority" : {
-          "label" : "Authority",
-          "value" : 0
-        },
-        "network" : {
-          "label" : "Network",
-          "value" : 0
-        },
-        "renown" : {
-          "label" : "Renown",
-          "value" : 0
-        },
-        "resources" : {
-          "label" : "Resources",
-          "value" : 0
-        },
-        "secrets" : {
-          "label" : "Secrets",
-          "value" : 0
-        }
-      }
-    }
-  },
-  "character": {
-    "templates" : ["details", "attributes", "skills", "status", "backgrounds"]
-  }
-},
-"Item": {
-  "types": ["weapon", "armor", "equipment", "artifact", "ammunition", "mod", "burn", "potential"],
-  "templates" : {
-    "description" : {
-    "description" : ""
-    },
-    "encumbrance" : {
-    "encumbrance" : 0
-    },
-    "tech" : {
-    "tech" : 0
-    },
-    "slots" : {
-    "slots" : 0
-    },
-    "qualities" : {
-    "qualities" : []
-    },
-    "effect" : {
-    "effect" : ""
-    },
-    "resources" : {
-    "resources" : 0
-    },
-    "value" : {
-    "value" : 0
-    },
-    "cult" : {
-    "cult" : ""
-    },
-    "damage" : {
-    "damage" : ""
-    },
-    "group" : {
-    "group" : ""
-    }
-  },
-  "ammunition" : {
-    "templates": ["description", "damage", "tech", "value"]
-  },
-  "weapon" : {
-    "templates" : ["description", "damage", "qualities", "encumbrance", "tech", "slots", "value", "resources", "cult"],
-    "handling": 0,
-    "distance": {
-      "short" : 0,
-      "far" : 0
-    },
-    "mag" : ""
-  },
-  "armor" : {
-    "templates" : ["description", "qualities", "encumbrance", "tech", "slots", "value", "resources", "cult"],
-    "AP" : 0
-  },
-  "equipment" : {
-    "templates" : ["description", "encumbrance", "tech", "value", "resources", "cult"]
-  },
-  "mod" : {
-    "templates" : ["description", "effect"],
-    "augmentation" : ""
-  }
-}
+						"skills": {
+							"artifact": {
+								"value": 0
+							},
+							"engineering": {
+								"value": 0
+							},
+							"focus": {
+								"value": 0
+							},
+							"legends": {
+								"value": 0
+							},
+							"medicine": {
+								"value": 0
+							},
+							"science": {
+								"value": 0
+							}
+						}
+					},
+					"psyche": {
+						"value": 1,
+						"skills": {
+							"cunning": {
+								"value": 0
+							},
+							"deception": {
+								"value": 0
+							},
+							"domination": {
+								"value": 0
+							},
+							"faith": {
+								"value": 0
+							},
+							"reaction": {
+								"value": 0
+							},
+							"willpower": {
+								"value": 0
+							}
+						}
+					},
+					"instinct": {
+						"value": 1,
+						"skills": {
+							"empathy": {
+								"value": 0
+							},
+							"orienteering": {
+								"value": 0
+							},
+							"perception": {
+								"value": 0
+							},
+							"primal": {
+								"value": 0
+							},
+							"survival": {
+								"value": 0
+							},
+							"taming": {
+								"value": 0
+							}
+						}
+					}
+				}
+			},
+			"status": {
+				"status": {
+					"ego": {
+						"max": 0,
+						"value": 0
+					},
+					"spore": {
+						"max": 0,
+						"value": 0
+					},
+					"fleshwounds": {
+						"max": 0,
+						"value": 0
+					},
+					"trauma": {
+						"max": 0,
+						"value": 0
+					}
+				}
+			},
+			"backgrounds": {
+				"backgrounds": {
+					"allies": {
+						"label": "Allies",
+						"value": 0
+					},
+					"authority": {
+						"label": "Authority",
+						"value": 0
+					},
+					"network": {
+						"label": "Network",
+						"value": 0
+					},
+					"renown": {
+						"label": "Renown",
+						"value": 0
+					},
+					"resources": {
+						"label": "Resources",
+						"value": 0
+					},
+					"secrets": {
+						"label": "Secrets",
+						"value": 0
+					}
+				}
+			}
+		},
+		"character": {
+			"templates": [ "details", "attributes", "skills", "status", "backgrounds" ]
+		}
+	},
+	"Item": {
+		"types": [ "weapon", "armor", "equipment", "artifact", "ammunition", "mod", "burn", "potential" ],
+		"templates": {
+			"description": {
+				"description": ""
+			},
+			"equip": {
+				"equip": false
+			},
+			"encumbrance": {
+				"encumbrance": 0
+			},
+			"tech": {
+				"tech": 0
+			},
+			"slots": {
+				"slots": 0
+			},
+			"qualities": {
+				"qualities": []
+			},
+			"effect": {
+				"effect": ""
+			},
+			"resources": {
+				"resources": 0
+			},
+			"value": {
+				"value": 0
+			},
+			"cult": {
+				"cult": ""
+			},
+			"damage": {
+				"damage": ""
+			},
+			"group": {
+				"group": ""
+			}
+		},
+		"ammunition": {
+			"templates": [ "description", "damage", "tech", "value" ]
+		},
+		"weapon": {
+			"templates": [
+				"description",
+				"equip",
+				"damage",
+				"qualities",
+				"encumbrance",
+				"tech",
+				"slots",
+				"value",
+				"resources",
+				"cult"
+			],
+			"handling": 0,
+			"distance": {
+				"short": 0,
+				"far": 0
+			},
+			"mag": ""
+		},
+		"armor": {
+			"templates": [
+				"description",
+				"equip",
+				"qualities",
+				"encumbrance",
+				"tech",
+				"slots",
+				"value",
+				"resources",
+				"cult"
+			],
+			"AP": 0
+		},
+		"equipment": {
+			"templates": [ "description", "equip", "encumbrance", "tech", "value", "resources", "cult" ]
+		},
+		"mod": {
+			"templates": [ "description", "effect" ],
+			"augmentation": ""
+		}
+	}
 }
