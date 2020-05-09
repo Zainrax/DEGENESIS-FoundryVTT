@@ -47,7 +47,7 @@ Hooks.once("init", async function() {
   CONFIG.Actor.entityClass = DegenesisActor;
   CONFIG.Item.entityClass = DegenesisItem;
 
-  Handlebars.registerHelper("stat", (value, max, total) => {
+  Handlebars.registerHelper("statBlock", (value, max, total) => {
     const diffMax = Math.max(0, max - value);
     const diffTotal = max <= 0 ? total - value : total - max
     console.log(value)

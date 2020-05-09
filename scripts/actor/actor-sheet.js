@@ -10,7 +10,7 @@ export class DegenesisActorSheet extends ActorSheet {
 		return mergeObject(super.defaultOptions, {
 			classes: [ 'degenesis', 'sheet', 'actor' ],
 			template: 'systems/degenesis/templates/actor/actor-sheet.html',
-			width: 600,
+			width: 800,
 			height: 600,
 			tabs: [ { navSelector: '.sheet-tabs', contentSelector: '.tab-content', initial: 'main' } ]
 		});
