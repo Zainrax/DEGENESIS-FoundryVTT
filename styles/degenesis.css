@@ -205,7 +205,7 @@
 .degenesis.sheet .three-Cs .sheet-field-stack {
 	align-items: center;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: wrap;
 }
 
@@ -332,18 +332,11 @@
 }
 
 /* Items */
-.degenesis.sheet .items-list {
+.items-list {
 	list-style: none;
 	padding: 0;
 }
-.degenesis.sheet .inventory-tab {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: stretch;
-	flex-wrap: wrap;
-	margin-top: 20px;
-}
+
 .degenesis.sheet .inventory-tab .arsenal {
 	flex-grow: 1;
 }
@@ -363,11 +356,12 @@
 .degenesis.sheet .items-list .item-controls {
 	flex: 0 0 36px;
 }
-.degenesis.sheet .item-header .item-controls {
+.degenesis.sheet .item-controls {
 	flex: 0 0 50px;
 }
 
 .degenesis.sheet .item-section {
+	flex-grow: 1;
 	border: 1px solid black;
 }
 
@@ -397,12 +391,21 @@
 }
 
 .degenesis.sheet .item-header .header-type {
-	background-color: black;
+	background-color: rgb(20, 20, 20);
 	color: white;
 	text-align: center;
 	height: 24px;
 	line-height: 24px;
 }
+
+.degenesis.sheet .section-header .header-type {
+	background-color: rgb(51, 51, 51);
+	color: white;
+	text-align: center;
+	height: 24px;
+	line-height: 24px;
+}
+
 
 /* Attributes */
 .degenesis.sheet .attributes-header {
@@ -443,4 +446,37 @@
 
 .degenesis.sheet .attributes-list li a.attribute-control {
 	border: none;
+}
+
+/* Advantages */
+.advantages-tab {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 1em;
+}
+
+.advantages-tab article {
+	text-transform: uppercase;
+	width: 50%;
+}
+
+.advantages-backgrounds .items-list {
+	padding-left: 0.7em;
+	padding-right: 0.5em;
+}
+
+.items-list .background-item {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* stat block */
+.stat-block {
+	display: flex;
+	justify-content: space-between;
+	max-width: 5em;
+}
+
+.stat-block .stat-max {
+	color: rgb(78, 78, 78);
 }

@@ -7,7 +7,7 @@
     "compatibleCoreVersion": "0.5.5",
     "templateVersion": 2,
     "author": "Moo Man",
-    "esmodules": ["degenesis.js", "node_modules/lodash"],
+    "esmodules": ["degenesis.js"],
     "styles": ["styles/degenesis.css"],
     "scripts": [
         "greensock/dist/TweenMax.min.js",

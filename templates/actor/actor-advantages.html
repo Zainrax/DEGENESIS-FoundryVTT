@@ -1,0 +1,25 @@
+<section class="advantages-tab">
+  {{#with actor.data.advantages as |advantage|}}
+    <article class="advantages-backgrounds">
+      <h3>{{backgrounds.label}}</h1>
+      <ol class="items-list">
+        {{#each backgrounds.value as |background backgroundKey|}}
+          <li class="background-item">
+            <h4>{{backgroundKey}}</h4>
+            {{{stat background.value 0 3}}}
+          </li>
+        {{/each}}
+        
+      </ol>
+    </article>
+    <article class="advantages-potentials">
+      <h3>{{potentials.label}}</h1>
+    </article>
+    <article class="advantages-scars">
+      <h3>{{scars.label}}</h1>
+    </article>
+    <article class="advantages-legacy">
+      <h3>{{legacy.label}}</h1>
+    </article>
+   {{/with}}
+</section>

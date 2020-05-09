@@ -45,24 +45,29 @@ export class DegenesisActor extends Actor {
 		let inventory = {
 			arsenal: {
 				header: 'ARSENAL',
-				weapon: { header: 'WEAPONS', items: [], show: false },
-				armor: { header: 'ARMOR', items: [], show: false },
-				ammunition: { header: 'AMMUNITION', items: [], show: false }
+				section: {
+					weapon: { header: 'WEAPONS', items: [], show: false, equiptable: true },
+					armor: { header: 'ARMOR', items: [], show: false, equiptable: true },
+					ammunition: { header: 'AMMUNITION', items: [], show: false, equiptable: true }
+				}
 			},
 			possessions: {
 				header: 'POSSESSIONS',
-				equipment: { header: 'EQUIPMENT', items: [], show: false },
-				mod: { header: 'MODIFIER', items: [], show: false },
-				artifact: { header: 'ARTIFACT', items: [], show: false },
-				burn: { header: 'BURN', items: [], show: false }
+				section: {
+					equipment: { header: 'EQUIPMENT', items: [], show: false, equiptable: false},
+					mod: { header: 'MODIFIER', items: [], show: false, equiptable: false },
+					artifact: { header: 'ARTIFACT', items: [], show: false, equiptable: false },
+					burn: { header: 'BURN', items: [], show: false, equiptable: false }
+				}
 			}
 		};
 		actorData.items.forEach((item) => {
-			console.log(item)
-			if (inventory.arsenal.hasOwnProperty(item.type)) {
-				inventory.arsenal[item.type].items.push(item);
-			} else if (inventory.possessions.hasOwnProperty(item.type)) {
-				inventory.possessions[item.type].items.push(item);
+			if (inventory.arsenal.section.hasOwnProperty(item.type)) {
+				inventory.arsenal.section[item.type].items.push(item);
+				inventory.arsenal.section[item.type].equiptable = item.data.hasOwnProperty("equipped")
+			} else if (inventory.possessions.section.hasOwnProperty(item.type)) {
+				inventory.possessions.section[item.type].items.push(item)
+				inventory.possessions.section[item.type].equiptable = item.data.hasOwnProperty("equipped");
 			}
 		});
 

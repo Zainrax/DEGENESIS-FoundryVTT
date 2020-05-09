@@ -1,348 +1,408 @@
 {
-	"Actor": {
-		"types": [ "character", "npc" ],
-		"templates": {
-			"details": {
-				"details": {
-					"age": {
-						"value": 0
-					},
-					"rank": {
-						"value": ""
-					},
-					"experience": {
-						"value": 0
-					},
-					"sex": {
-						"value": ""
-					},
-					"height": {
-						"value": ""
-					},
-					"weight": {
-						"value": ""
-					},
-					"dinars": {
-						"value": 0
-					},
-					"concept": {
-						"value": ""
-					},
-					"cult": {
-						"value": ""
-					},
-					"culture": {
-						"value": ""
-					}
-				}
-			},
-			"attributes": {
-				"attributes": {
-					"body": {
-						"value": 1,
-						"skills": {
-							"athletics": {
-								"value": 0
-							},
-							"brawl": {
-								"value": 0
-							},
-							"force": {
-								"value": 0
-							},
-							"melee": {
-								"value": 0
-							},
-							"stamina": {
-								"value": 0
-							},
-							"toughness": {
-								"value": 0
-							}
-						}
-					},
-					"agility": {
-						"value": 1,
+    "Actor": {
+        "types": ["character", "npc"],
+        "templates": {
+            "details": {
+                "details": {
+                    "age": {
+                        "value": 0
+                    },
+                    "rank": {
+                        "value": ""
+                    },
+                    "experience": {
+                        "value": 0
+                    },
+                    "sex": {
+                        "value": ""
+                    },
+                    "height": {
+                        "value": ""
+                    },
+                    "weight": {
+                        "value": ""
+                    },
+                    "dinars": {
+                        "value": 0
+                    },
+                    "concept": {
+                        "value": ""
+                    },
+                    "cult": {
+                        "value": ""
+                    },
+                    "culture": {
+                        "value": ""
+                    }
+                }
+            },
+            "attributes": {
+                "attributes": {
+                    "body": {
+                        "value": 1,
+                        "max": 0,
+                        "skills": {
+                            "athletics": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "brawl": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "force": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "melee": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "stamina": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "toughness": {
+                                "value": 0,
+                                "max": 0
+                            }
+                        }
+                    },
+                    "agility": {
+                        "value": 1,
 
-						"skills": {
-							"crafting": {
-								"value": 0
-							},
-							"dexterity": {
-								"value": 0
-							},
-							"navigation": {
-								"value": 0
-							},
-							"mobility": {
-								"value": 0
-							},
-							"projectiles": {
-								"value": 0
-							},
-							"stealth": {
-								"value": 0
-							}
-						}
-					},
-					"charisma": {
-						"value": 1,
-						"skills": {
-							"arts": {
-								"value": 0
-							},
-							"conduct": {
-								"value": 0
-							},
-							"expression": {
-								"value": 0
-							},
-							"leadership": {
-								"value": 0
-							},
-							"negotiation": {
-								"value": 0
-							},
-							"seduction": {
-								"value": 0
-							}
-						}
-					},
-					"intellect": {
-						"value": 1,
+                        "max": 0,
+                        "skills": {
+                            "crafting": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "dexterity": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "navigation": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "mobility": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "projectiles": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "stealth": {
+                                "value": 0,
+                                "max": 0
+                            }
+                        }
+                    },
+                    "charisma": {
+                        "value": 1,
+                        "max": 0,
+                        "skills": {
+                            "arts": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "conduct": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "expression": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "leadership": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "negotiation": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "seduction": {
+                                "value": 0,
+                                "max": 0
+                            }
+                        }
+                    },
+                    "intellect": {
+                        "value": 1,
 
-						"skills": {
-							"artifact": {
-								"value": 0
-							},
-							"engineering": {
-								"value": 0
-							},
-							"focus": {
-								"value": 0
-							},
-							"legends": {
-								"value": 0
-							},
-							"medicine": {
-								"value": 0
-							},
-							"science": {
-								"value": 0
-							}
-						}
-					},
-					"psyche": {
-						"value": 1,
-						"skills": {
-							"cunning": {
-								"value": 0
-							},
-							"deception": {
-								"value": 0
-							},
-							"domination": {
-								"value": 0
-							},
-							"faith": {
-								"value": 0
-							},
-							"reaction": {
-								"value": 0
-							},
-							"willpower": {
-								"value": 0
-							}
-						}
-					},
-					"instinct": {
-						"value": 1,
-						"skills": {
-							"empathy": {
-								"value": 0
-							},
-							"orienteering": {
-								"value": 0
-							},
-							"perception": {
-								"value": 0
-							},
-							"primal": {
-								"value": 0
-							},
-							"survival": {
-								"value": 0
-							},
-							"taming": {
-								"value": 0
-							}
-						}
-					}
-				}
-			},
-			"condition": {
-				"condition": {
-					"ego": {
-						"max": 0,
-						"value": 0
-					},
-					"spore": {
-						"max": 0,
-						"value": 0
-					},
-					"fleshwounds": {
-						"max": 0,
-						"value": 0
-					},
-					"trauma": {
-						"max": 0,
-						"value": 0
-					}
-				}
-			},
-			"advantages": {
-				"advantages": {
-					"backgrounds": {
-						"allies": {
-							"value": 0
-						},
-						"authority": {
-							"value": 0
-						},
-						"network": {
-							"value": 0
-						},
-						"renown": {
-							"value": 0
-						},
-						"resources": {
-							"value": 0
-						},
-						"secrets": {
-							"value": 0
-						}
-					},
-					"potentials": {
-						"prerequisite": {
-							"value": []
-						},
-						"description": {
-							"value": ""
-						}
-					},
-					"scars": {
-						"name": {
-							"value": 0
-						},
-						"alignment": {
-							"value": ""
-						},
-						"constellation": {
-							"value": ""
-						},
-						"value": {
-							"value": ""
-						},
-						"infamy": {
-							"value": 0
-						}
-					}
-				}
-			}
-		},
-		"character": {
-			"templates": [ "details", "attributes", "condition", "advantages" ]
-		}
-	},
-	"Item": {
-		"types": [ "weapon", "armor", "equipment", "artifact", "ammunition", "mod", "burn" ],
-		"templates": {
-			"general": {
-				"value": {
-					"value": 0
-				},
-				"description": {
-					"value": ""
-				},
-				"tech": {
-					"value": 0
-				},
-				"cult": {
-					"value": ""
-				}
-			},
-			"equiptable": {
-				"equipped": {
-					"value": false
-				},
-				"qualities": {
-					"value": []
-				},
-				"slots": {
-					"value": 0
-				}
-			},
-			"usable": {
-				"effect": {
-					"value": ""
-				}
-			},
-			"damage": {
-				"damage": {
-					"value": 0
-				}
-			},
-			"weapon": {
-				"handling": {
-					"value": ""
-				},
-				"magazine": {
-					"value": 0
-				},
-				"distance": {
-					"min": 0,
-					"max": 0
-				}
-			},
-			"armor": {
-				"rating": {
-					"value": 0
-				}
-			},
-			"shield": {
-				"defence": {
-					"value": 0
-				},
-				"attack": {
-					"value": 0
-				}
-			},
-			"ammunition": {
-				"caliber": {
-					"value": ""
-				}
-			}
-		},
-		"weapon": {
-			"templates": [ "general", "damage", "equiptable", "weapon" ]
-		},
-		"armor": {
-			"templates": [ "general", "armor", "equiptable" ]
-		},
-		"equipment": {
-			"templates": [ "general" ]
-		},
-		"artifact": {
-			"templates": [ "general" ]
-		},
-		"ammunition": {
-			"templates": [ "general", "damage" ]
-		},
-		"mod": {
-			"templates": [ "general", "usable" ]
-		},
-		"burn": {
-			"templates": [ "general", "usable" ]
-		}
-	}
+                        "max": 0,
+                        "skills": {
+                            "artifact": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "engineering": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "focus": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "legends": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "medicine": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "science": {
+                                "value": 0,
+                                "max": 0
+                            }
+                        }
+                    },
+                    "psyche": {
+                        "value": 1,
+                        "max": 0,
+                        "skills": {
+                            "cunning": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "deception": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "domination": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "faith": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "reaction": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "willpower": {
+                                "value": 0,
+                                "max": 0
+                            }
+                        }
+                    },
+                    "instinct": {
+                        "value": 1,
+                        "max": 0,
+                        "skills": {
+                            "empathy": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "orienteering": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "perception": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "primal": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "survival": {
+                                "value": 0,
+                                "max": 0
+                            },
+                            "taming": {
+                                "value": 0,
+                                "max": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "condition": {
+                "condition": {
+                    "ego": {
+                        "max": 0,
+                        "value": 0
+                    },
+                    "spore": {
+                        "max": 0,
+                        "value": 0
+                    },
+                    "fleshwounds": {
+                        "max": 0,
+                        "value": 0
+                    },
+                    "trauma": {
+                        "max": 0,
+                        "value": 0
+                    }
+                }
+            },
+            "advantages": {
+                "advantages": {
+                    "label": "advantages",
+                    "backgrounds": {
+                        "label": "backgrounds",
+                        "value": {
+                            "allies": {
+                                "value": 0
+                            },
+                            "authority": {
+                                "value": 0
+                            },
+                            "network": {
+                                "value": 0
+                            },
+                            "renown": {
+                                "value": 0
+                            },
+                            "resources": {
+                                "value": 0
+                            },
+                            "secrets": {
+                                "value": 0
+                            }
+                        }
+                    },
+                    "potentials": {
+                        "label": "potentials",
+                        "value": []
+                    },
+                    "scars": {
+                        "label": "scars",
+                        "value": {
+                            "name": {
+                                "value": 0
+                            },
+                            "alignment": {
+                                "value": ""
+                            },
+                            "constellation": {
+                                "value": ""
+                            },
+                            "value": {
+                                "value": ""
+                            },
+                            "infamy": {
+                                "value": 0
+                            }
+                        }
+                    },
+                    "legacy": {
+                        "label": "legacy",
+                        "value": []
+                    }
+                }
+            }
+        },
+        "character": {
+            "templates": ["details", "attributes", "condition", "advantages"]
+        }
+    },
+    "Item": {
+        "types": [
+            "weapon",
+            "armor",
+            "equipment",
+            "artifact",
+            "ammunition",
+            "mod",
+            "burn"
+        ],
+        "templates": {
+            "general": {
+                "value": {
+                    "value": 0
+                },
+                "encumbrance": {
+                    "value": 0
+                },
+                "description": {
+                    "value": ""
+                },
+                "tech": {
+                    "value": 0
+                },
+                "cult": {
+                    "value": ""
+                }
+            },
+            "equiptable": {
+                "equipped": {
+                    "value": false
+                },
+                "qualities": {
+                    "value": []
+                },
+                "slots": {
+                    "value": 0
+                }
+            },
+            "usable": {
+                "effect": {
+                    "value": ""
+                }
+            },
+            "damage": {
+                "damage": {
+                    "value": 0
+                }
+            },
+            "weapon": {
+                "handling": {
+                    "value": ""
+                },
+                "magazine": {
+                    "value": 0
+                },
+                "distance": {
+                    "min": 0,
+                    "max": 0
+                }
+            },
+            "armor": {
+                "rating": {
+                    "value": 0
+                }
+            },
+            "shield": {
+                "defence": {
+                    "value": 0
+                },
+                "attack": {
+                    "value": 0
+                }
+            },
+            "ammunition": {
+                "caliber": {
+                    "value": ""
+                }
+            }
+        },
+        "weapon": {
+            "templates": ["general", "damage", "equiptable", "weapon"]
+        },
+        "armor": {
+            "templates": ["general", "armor", "equiptable"]
+        },
+        "equipment": {
+            "templates": ["general"]
+        },
+        "artifact": {
+            "templates": ["general"]
+        },
+        "ammunition": {
+            "templates": ["general", "damage"]
+        },
+        "mod": {
+            "templates": ["general", "usable"]
+        },
+        "burn": {
+            "templates": ["general", "usable"]
+        }
+    }
 }

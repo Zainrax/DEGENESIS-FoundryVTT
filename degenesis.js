@@ -39,10 +39,25 @@ Hooks.once("init", async function() {
   loadTemplates([
     "systems/degenesis/templates/actor/actor-main.html",
     "systems/degenesis/templates/actor/actor-attributes-skills.html",
+    "systems/degenesis/templates/actor/actor-advantages.html",
     "systems/degenesis/templates/actor/actor-inventory.html"
   ]);
 
     // Assign the actor class to the CONFIG
   CONFIG.Actor.entityClass = DegenesisActor;
   CONFIG.Item.entityClass = DegenesisItem;
+
+  Handlebars.registerHelper("stat", (value, max, total) => {
+    const diffMax = Math.max(0, max - value);
+    const diffTotal = max <= 0 ? total - value : total - max
+    console.log(value)
+    console.log(max)
+    console.log(total)
+    console.log(diffTotal)
+    let valueStats = Array(value).fill().map((_, i) => `<a class="stat-selected" data-stat="${i+1}"><i class="fas fa-square"></i></a>`).join('\n')
+    let maxStats = Array(diffMax).fill().map((_, i) => `<a class="stat-max" data-stat="${i+1}"><i class="fas fa-square"></i></a>`).join('\n')
+    let totalStats = Array(diffTotal).fill().map((_, i) => `<a class="stat-total" data-stat="${i+1}"><i class="far fa-square"></i></a>`).join('\n')
+
+    return "<div class='stat-block'>\n" + valueStats + maxStats + totalStats  + "\n</div>"
+  })
 });

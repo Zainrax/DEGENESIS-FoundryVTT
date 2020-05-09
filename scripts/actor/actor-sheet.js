@@ -37,7 +37,6 @@ export class DegenesisActorSheet extends ActorSheet {
 			(1 - data.data.condition.fleshwounds.value / data.data.condition.fleshwounds.max) * 100;
 		data.data.condition.spore.pct = (1 - data.data.condition.spore.value / data.data.condition.spore.max) * 100;
 		data.data.condition.trauma.pct = (1 - data.data.condition.trauma.value / data.data.condition.trauma.max) * 100;
-
 		mergeObject(data, this.actor.prepare());
 		return data;
 	}
@@ -59,28 +58,45 @@ export class DegenesisActorSheet extends ActorSheet {
 		// Everything below here is only needed if the sheet is editable
 		if (!this.options.editable) return;
 
+		html.find('.item-controls').click(ev => {
+			const section = $(ev.currentTarget).data('showId')
+			if (this.actor.inventory.hasOwnProperty(section)){
+
+			}
+		})
+
 		$('input[type=text]').focusin(function() {
 			$(this).select();
 		});
 		// Update Inventory Item
 		html.find('.item-edit').click((ev) => {
-			const itemData = $(ev.currentTarget).parents('.item').data('itemId');
-			const item = this.actor.getOwnedItem(itemData);
+			const itemId = $(ev.currentTarget).parents('.item').data('itemId');
+			const item = this.actor.getOwnedItem(itemId);
 			item.sheet.render(true);
 		});
 
 		// Delete Inventory Item
 		html.find('.item-delete').click((ev) => {
-			const itemData = $(ev.currentTarget).parents('.item').data('itemId');
-			this.actor.deleteOwnedItem(itemData);
-			li.slideUp(200, () => this.render(false));
+			const li = $(ev.currentTarget).parents('.item');
+			const itemId = li.data('itemId')
+			li.slideUp(200, () => {
+				this.render(false)
+				this.actor.deleteOwnedItem(itemId)
+			});
+			;
 		});
 
-		html.find('.item-create').click((ev) => this._onItemCreate(ev));
+		html.find('.item-create').click((ev) => {
+			const itemData = $(ev.currentTarget).parents('.item').data('itemId');
+			
+		});
 
 		html.find('.item-equip').click((ev) => {
-			const itemData = $(ev.currentTarget).parents('.item').data('itemId');
-			console.log(itemData);
+			const itemId = $(ev.currentTarget).parents('.item').data('itemId');
+			let {data} = this.actor.getOwnedItem(itemId)
+			console.log(data)
+			let update = {_id: data._id, data:{ equipped: { value: !data.data.equipped.value}}}
+			this.actor.updateOwnedItem(update)
 		});
 	}
 
