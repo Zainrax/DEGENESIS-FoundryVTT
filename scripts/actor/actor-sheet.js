@@ -32,11 +32,11 @@ export class DegenesisActorSheet extends ActorSheet {
 			? `systems/degenesis/icons/culture/${this.actor.data.data.details.culture.value}.svg`
 			: 'systems/degenesis/icons/blank.png';
 
-		data.data.status.ego.pct = (1 - data.data.status.ego.value / data.data.status.ego.max) * 100;
-		data.data.status.fleshwounds.pct =
-			(1 - data.data.status.fleshwounds.value / data.data.status.fleshwounds.max) * 100;
-		data.data.status.spore.pct = (1 - data.data.status.spore.value / data.data.status.spore.max) * 100;
-		data.data.status.trauma.pct = (1 - data.data.status.trauma.value / data.data.status.trauma.max) * 100;
+		data.data.condition.ego.pct = (1 - data.data.condition.ego.value / data.data.condition.ego.max) * 100;
+		data.data.condition.fleshwounds.pct =
+			(1 - data.data.condition.fleshwounds.value / data.data.condition.fleshwounds.max) * 100;
+		data.data.condition.spore.pct = (1 - data.data.condition.spore.value / data.data.condition.spore.max) * 100;
+		data.data.condition.trauma.pct = (1 - data.data.condition.trauma.value / data.data.condition.trauma.max) * 100;
 
 		mergeObject(data, this.actor.prepare());
 		return data;
@@ -62,25 +62,25 @@ export class DegenesisActorSheet extends ActorSheet {
 		$('input[type=text]').focusin(function() {
 			$(this).select();
 		});
-
-		html.find('.item-equipped').click((ev) => {
-			const li = $(ev.currentTarget).parents('.item').attr('data-item-id');
-			const item = this.actor.getOwnedItem(li.data('itemId'));
-			item.sheet.render(true);
-		});
-
 		// Update Inventory Item
 		html.find('.item-edit').click((ev) => {
-			const li = $(ev.currentTarget).parents('.item').attr('data-item-id');
-			const item = this.actor.getOwnedItem(li);
+			const itemData = $(ev.currentTarget).parents('.item').data('itemId');
+			const item = this.actor.getOwnedItem(itemData);
 			item.sheet.render(true);
 		});
 
 		// Delete Inventory Item
 		html.find('.item-delete').click((ev) => {
-			const li = $(ev.currentTarget).parents('.item');
-			this.actor.deleteOwnedItem(li.data('itemId'));
+			const itemData = $(ev.currentTarget).parents('.item').data('itemId');
+			this.actor.deleteOwnedItem(itemData);
 			li.slideUp(200, () => this.render(false));
+		});
+
+		html.find('.item-create').click((ev) => this._onItemCreate(ev));
+
+		html.find('.item-equip').click((ev) => {
+			const itemData = $(ev.currentTarget).parents('.item').data('itemId');
+			console.log(itemData);
 		});
 	}
 

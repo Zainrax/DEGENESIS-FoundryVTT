@@ -5,10 +5,10 @@
  */
 
 // Import Modules
-import { DegenesisItemSheet } from "./module/item/item-sheet.js";
-import { DegenesisItem } from "./module/item/item-degenesis.js";
-import { DegenesisActorSheet } from "./module/actor/actor-sheet.js";
-import { DegenesisActor } from "./module/actor/actor-degenesis.js";
+import { DegenesisItemSheet } from "./scripts/item/item-sheet.js";
+import { DegenesisItem } from "./scripts/item/item-degenesis.js";
+import { DegenesisActorSheet } from "./scripts/actor/actor-sheet.js";
+import { DegenesisActor } from "./scripts/actor/actor-degenesis.js";
 
 // import tippy from './node_modules/tippy.js';
 // import './node_modules/tippy.js/dist/tippy.css'; // optional for styling

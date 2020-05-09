@@ -5,43 +5,33 @@
 			"details": {
 				"details": {
 					"age": {
-						"type": "Number",
-						"value": null
+						"value": 0
 					},
 					"rank": {
-						"type": "String",
 						"value": ""
 					},
 					"experience": {
-						"type": "Number",
 						"value": 0
 					},
 					"sex": {
-						"type": "String",
 						"value": ""
 					},
 					"height": {
-						"type": "String",
 						"value": ""
 					},
 					"weight": {
-						"type": "String",
 						"value": ""
 					},
 					"dinars": {
-						"type": "Number",
 						"value": 0
 					},
 					"concept": {
-						"type": "String",
 						"value": ""
 					},
 					"cult": {
-						"type": "String",
 						"value": ""
 					},
 					"culture": {
-						"type": "String",
 						"value": ""
 					}
 				}
@@ -190,8 +180,8 @@
 					}
 				}
 			},
-			"status": {
-				"status": {
+			"condition": {
+				"condition": {
 					"ego": {
 						"max": 0,
 						"value": 0
@@ -210,122 +200,149 @@
 					}
 				}
 			},
-			"backgrounds": {
-				"backgrounds": {
-					"allies": {
-						"label": "Allies",
-						"value": 0
+			"advantages": {
+				"advantages": {
+					"backgrounds": {
+						"allies": {
+							"value": 0
+						},
+						"authority": {
+							"value": 0
+						},
+						"network": {
+							"value": 0
+						},
+						"renown": {
+							"value": 0
+						},
+						"resources": {
+							"value": 0
+						},
+						"secrets": {
+							"value": 0
+						}
 					},
-					"authority": {
-						"label": "Authority",
-						"value": 0
+					"potentials": {
+						"prerequisite": {
+							"value": []
+						},
+						"description": {
+							"value": ""
+						}
 					},
-					"network": {
-						"label": "Network",
-						"value": 0
-					},
-					"renown": {
-						"label": "Renown",
-						"value": 0
-					},
-					"resources": {
-						"label": "Resources",
-						"value": 0
-					},
-					"secrets": {
-						"label": "Secrets",
-						"value": 0
+					"scars": {
+						"name": {
+							"value": 0
+						},
+						"alignment": {
+							"value": ""
+						},
+						"constellation": {
+							"value": ""
+						},
+						"value": {
+							"value": ""
+						},
+						"infamy": {
+							"value": 0
+						}
 					}
 				}
 			}
 		},
 		"character": {
-			"templates": [ "details", "attributes", "skills", "status", "backgrounds" ]
+			"templates": [ "details", "attributes", "condition", "advantages" ]
 		}
 	},
 	"Item": {
-		"types": [ "weapon", "armor", "equipment", "artifact", "ammunition", "mod", "burn", "potential" ],
+		"types": [ "weapon", "armor", "equipment", "artifact", "ammunition", "mod", "burn" ],
 		"templates": {
-			"description": {
-				"description": ""
+			"general": {
+				"value": {
+					"value": 0
+				},
+				"description": {
+					"value": ""
+				},
+				"tech": {
+					"value": 0
+				},
+				"cult": {
+					"value": ""
+				}
 			},
-			"equip": {
-				"equip": false
+			"equiptable": {
+				"equipped": {
+					"value": false
+				},
+				"qualities": {
+					"value": []
+				},
+				"slots": {
+					"value": 0
+				}
 			},
-			"encumbrance": {
-				"encumbrance": 0
-			},
-			"tech": {
-				"tech": 0
-			},
-			"slots": {
-				"slots": 0
-			},
-			"qualities": {
-				"qualities": []
-			},
-			"effect": {
-				"effect": ""
-			},
-			"resources": {
-				"resources": 0
-			},
-			"value": {
-				"value": 0
-			},
-			"cult": {
-				"cult": ""
+			"usable": {
+				"effect": {
+					"value": ""
+				}
 			},
 			"damage": {
-				"damage": ""
+				"damage": {
+					"value": 0
+				}
 			},
-			"group": {
-				"group": ""
+			"weapon": {
+				"handling": {
+					"value": ""
+				},
+				"magazine": {
+					"value": 0
+				},
+				"distance": {
+					"min": 0,
+					"max": 0
+				}
+			},
+			"armor": {
+				"rating": {
+					"value": 0
+				}
+			},
+			"shield": {
+				"defence": {
+					"value": 0
+				},
+				"attack": {
+					"value": 0
+				}
+			},
+			"ammunition": {
+				"caliber": {
+					"value": ""
+				}
 			}
 		},
-		"ammunition": {
-			"templates": [ "description", "damage", "tech", "value" ]
-		},
 		"weapon": {
-			"templates": [
-				"description",
-				"equip",
-				"damage",
-				"qualities",
-				"encumbrance",
-				"tech",
-				"slots",
-				"value",
-				"resources",
-				"cult"
-			],
-			"handling": 0,
-			"distance": {
-				"short": 0,
-				"far": 0
-			},
-			"mag": ""
+			"templates": [ "general", "damage", "equiptable", "weapon" ]
 		},
 		"armor": {
-			"templates": [
-				"description",
-				"equip",
-				"qualities",
-				"encumbrance",
-				"tech",
-				"slots",
-				"value",
-				"resources",
-				"cult"
-			],
-			"AP": 0
+			"templates": [ "general", "armor", "equiptable" ]
 		},
 		"equipment": {
-			"templates": [ "description", "equip", "encumbrance", "tech", "value", "resources", "cult" ]
+			"templates": [ "general" ]
+		},
+		"artifact": {
+			"templates": [ "general" ]
+		},
+		"ammunition": {
+			"templates": [ "general", "damage" ]
 		},
 		"mod": {
-			"templates": [ "description", "effect" ],
-			"augmentation": ""
+			"templates": [ "general", "usable" ]
+		},
+		"burn": {
+			"templates": [ "general", "usable" ]
 		}
 	}
 }

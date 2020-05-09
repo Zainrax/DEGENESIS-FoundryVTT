@@ -1,12 +1,13 @@
 <div class="inventory-tab">
+
    {{#each inventory as |section index|}}
-   <div class="item-section">
+   <div class="item-section {{index}}">
       <div class="item-header">   
          <div class="header-type flexrow">
             <div style="flex: 0 0 50px"></div>
             <span>{{section.header}}</span>
             <div class="item-controls">
-                  <a class="item-control item-add" title="Add Item">+ ADD</a>
+                  <a class="item-control item-create" title="Add Item">+</a>
             </div>
          </div>
          <div class="header-details flexrow">
@@ -14,7 +15,6 @@
             <div class="item-name">NAME</div>
             <span class="item-equipped">EQPT.</span>
             <div class="item-encumbrance">ENC.</div>
-            <div class="item-tech">TECH</div>
             <div style="flex: 0 0 40px"></div>
          </div>
       </div>
@@ -23,7 +23,9 @@
          <li class = "item flexrow" data-item-id={{item._id}}>
             <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
             <span class="item-name">{{item.name}}</span>
-            <span class="item-equipped"><a><i class="far fa-circle"></i></a></span>
+            <span class="item-equipped"><a class="item-equip">
+               <i class="far fa-circle"></i>
+            </a></span>
             <span class="item-encumbrance">{{item.data.encumbrance}}</span>
             <span class="item-tech">{{item.data.tech}}</span>
             <div class="item-controls">

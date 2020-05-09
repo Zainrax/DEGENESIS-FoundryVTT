@@ -205,7 +205,8 @@
 .degenesis.sheet .three-Cs .sheet-field-stack {
 	align-items: center;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 .degenesis.sheet .three-Cs > * {
@@ -336,7 +337,19 @@
 	padding: 0;
 }
 .degenesis.sheet .inventory-tab {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: stretch;
+	flex-wrap: wrap;
 	margin-top: 20px;
+}
+.degenesis.sheet .inventory-tab .arsenal {
+	flex-grow: 1;
+}
+
+.degenesis.sheet .inventory-tab .possessions {
+	flex-grow: 3;
 }
 
 .degenesis.sheet .items-list .item {
