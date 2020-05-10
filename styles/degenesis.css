@@ -121,14 +121,7 @@
 	border-bottom: 1px solid black;
 }
 
-.degenesis.sheet .condition .condition-item:hover,
-.degenesis.sheet .condition .condition-section:hover .degenesis.sheet .sheet-field-stack:hover,
-.degenesis.sheet .sheet-field:hover {
-	color: var(--degenesis-red);
-	-webkit-transition: color 100ms linear;
-	-ms-transition: color 100ms linear;
-	transition: color 100ms linear;
-}
+
 
 .degenesis.sheet .sheet-field-stack .field-input-stacked:hover,
 .degenesis.sheet .sheet-field:hover {
@@ -206,7 +199,6 @@
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	flex-wrap: wrap;
 }
 
 .degenesis.sheet .three-Cs > * {
@@ -238,14 +230,14 @@
 	height: 50%;
 }
 
-.degenesis.sheet .skill:hover,
+/* .degenesis.sheet .skill:hover,
 .degenesis.sheet .condition .condition-item:hover,
 .degenesis.sheet .condition .condition-section:hover {
 	color: var(--degenesis-red);
 	-webkit-transition: color 100ms linear;
 	-ms-transition: color 100ms linear;
 	transition: color 100ms linear;
-}
+} */
 
 .degenesis.sheet .condition > * {
 	width: 33%;
@@ -288,6 +280,7 @@
 .degenesis.sheet .attribute-tab {
 	text-transform: uppercase;
 	display: flex;
+	justify-content: space-around;
 	flex-wrap: wrap;
 }
 
@@ -473,10 +466,31 @@
 /* stat block */
 .stat-block {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
-	max-width: 5em;
+	max-width: 10.5em;
 }
 
 .stat-block .stat-max {
-	color: rgb(78, 78, 78);
+	color: rgb(88, 88, 88)
+}
+
+.stat-block:hover a {
+  color: var(--degenesis-red);
+}
+
+.stat-block a:hover {
+	color: var(--degenesis-red);
+}
+
+.stat-block .stat-total:hover ~ a {
+  color: black;
+}
+
+.stat-block .stat-max:hover ~ .stat-max {
+  color: rgb(88, 88, 88);
+}
+
+.stat-block .stat-max:hover ~ .stat-total {
+  color: black;
 }

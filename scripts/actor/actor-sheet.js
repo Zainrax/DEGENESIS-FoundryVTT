@@ -11,7 +11,7 @@ export class DegenesisActorSheet extends ActorSheet {
 			classes: [ 'degenesis', 'sheet', 'actor' ],
 			template: 'systems/degenesis/templates/actor/actor-sheet.html',
 			width: 800,
-			height: 600,
+			height: 650,
 			tabs: [ { navSelector: '.sheet-tabs', contentSelector: '.tab-content', initial: 'main' } ]
 		});
 	}
@@ -32,11 +32,6 @@ export class DegenesisActorSheet extends ActorSheet {
 			? `systems/degenesis/icons/culture/${this.actor.data.data.details.culture.value}.svg`
 			: 'systems/degenesis/icons/blank.png';
 
-		data.data.condition.ego.pct = (1 - data.data.condition.ego.value / data.data.condition.ego.max) * 100;
-		data.data.condition.fleshwounds.pct =
-			(1 - data.data.condition.fleshwounds.value / data.data.condition.fleshwounds.max) * 100;
-		data.data.condition.spore.pct = (1 - data.data.condition.spore.value / data.data.condition.spore.max) * 100;
-		data.data.condition.trauma.pct = (1 - data.data.condition.trauma.value / data.data.condition.trauma.max) * 100;
 		mergeObject(data, this.actor.prepare());
 		return data;
 	}
